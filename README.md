@@ -20,9 +20,17 @@ Check live demo at [https://palindrome.derekqq.ct8.pl/](https://palindrome.derek
 - types (custom data types)
 - services (services to connect firebase)
 
-#### To run app:
+#### To run on local machine
 
-In the project directory, you shou run:
+Rename sample configuration files.
+
+```
+ mv .env.sample .env
+```
+
+Next, edit these files depending on your environment.
+
+Then,
 
 ```javascript
 yarn;

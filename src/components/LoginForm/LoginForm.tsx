@@ -9,8 +9,6 @@ const LoginForm: React.FC = () => {
   const onSubmit = async () => {
     const { login, password } = watch();
     try {
-      console.log(login, password);
-
       await auth.doSignInWithEmailAndPassword(login, password);
     } catch (err) {
       setErrorMessage(err.message);
@@ -29,6 +27,7 @@ const LoginForm: React.FC = () => {
               className="form-control"
               placeholder="Please type: admin@test.com"
               id="login"
+              data-testid="login"
               name="login"
               ref={register({
                 required: 'Required',
@@ -38,12 +37,17 @@ const LoginForm: React.FC = () => {
                 },
               })}
             />
-            {errors.login && <small className="text-danger">This field is required</small>}
+            {errors.login && (
+              <small data-testid="error-msg-login" className="text-danger">
+                Field email is required
+              </small>
+            )}
           </div>
           <div className="col-12 text-left mb-2">
             <label htmlFor="exampleInputEmail1">Password</label>
             <input
               type="password"
+              data-testid="password"
               className="form-control"
               placeholder="Please type: admin1234"
               id="password"
@@ -53,7 +57,7 @@ const LoginForm: React.FC = () => {
             {errors.password && <small className="text-danger">This field is required</small>}
           </div>
           <div className="col-12 mt-2 d-flex flex-column">
-            <button className="btn btn-primary btn-md px-4" type="submit">
+            <button data-testid="submit" className="btn btn-primary btn-md px-4" type="submit">
               Login
             </button>
             {errorMessage && <p className="text-danger">{errorMessage}</p>}

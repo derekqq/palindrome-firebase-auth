@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "sentence": "Lorem ipsum dollor est",
+      "isPalindrome": false
+    },
+    {
+      "sentence": "inni winni",
+      "isPalindrome": true
+    },
+    {
+      "sentence": "kajak",
+      "isPalindrome": true
+    },
+    {
+      "sentence": "To nie palindrom",
+      "isPalindrome": false
+    },
+    {
+      "sentence": "As unika kin USA",
+      "isPalindrome": true
+    }
+  ]
+}

@@ -24,12 +24,14 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2020,
+    ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.json',
   },
   rules: {
     'linebreak-style': 'off',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': ['error'],
     'prettier/prettier': [
       'error',
       {
